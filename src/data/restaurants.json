@@ -1,0 +1,72 @@
+[
+  {
+    "id": "r1",
+    "name": "Spice Garden",
+    "cuisine": "Indian",
+    "minOrder": 300,
+    "deliveryTime": 25,
+    "menu": [
+      { "id": "m1", "name": "Paneer Butter Masala", "price": 160, "category": "Main" },
+      { "id": "m2", "name": "Veg Biryani", "price": 140, "category": "Main" },
+      { "id": "m3", "name": "Butter Naan", "price": 30, "category": "Main" },
+      { "id": "m4", "name": "Paneer Tikka", "price": 150, "category": "Starter" },
+      { "id": "m5", "name": "Veg Pakora", "price": 90, "category": "Starter" },
+      { "id": "m6", "name": "Gulab Jamun (2 pcs)", "price": 40, "category": "Dessert" }
+    ]
+  },
+  {
+    "id": "r2",
+    "name": "Noodle House",
+    "cuisine": "Chinese",
+    "minOrder": 120,
+    "deliveryTime": 35,
+    "menu": [
+      { "id": "m7", "name": "Veg Noodles", "price": 120, "category": "Main" },
+      { "id": "m8", "name": "Veg Fried Rice", "price": 130, "category": "Main" },
+      { "id": "m9", "name": "Manchurian", "price": 130, "category": "Starter" },
+      { "id": "m10", "name": "Spring Roll (3 pcs)", "price": 90, "category": "Starter" },
+      { "id": "m11", "name": "Honey Noodles", "price": 110, "category": "Dessert" }
+    ]
+  },
+  {
+    "id": "r3",
+    "name": "Pasta Palace",
+    "cuisine": "Italian",
+    "minOrder": 250,
+    "deliveryTime": 40,
+    "menu": [
+      { "id": "m12", "name": "White Sauce Pasta", "price": 180, "category": "Main" },
+      { "id": "m13", "name": "Red Sauce Pasta", "price": 170, "category": "Main" },
+      { "id": "m14", "name": "Garlic Bread", "price": 90, "category": "Starter" },
+      { "id": "m15", "name": "Cheese Balls", "price": 120, "category": "Starter" },
+      { "id": "m16", "name": "Chocolate Brownie", "price": 100, "category": "Dessert" }
+    ]
+  },
+  {
+    "id": "r4",
+    "name": "Burger Hub",
+    "cuisine": "Fast Food",
+    "minOrder": 150,
+    "deliveryTime": 20,
+    "menu": [
+      { "id": "m17", "name": "Veg Burger", "price": 80, "category": "Main" },
+      { "id": "m18", "name": "Cheese Burger", "price": 100, "category": "Main" },
+      { "id": "m19", "name": "French Fries", "price": 70, "category": "Starter" },
+      { "id": "m20", "name": "Veg Nuggets", "price": 90, "category": "Starter" },
+      { "id": "m21", "name": "Cold Coffee", "price": 60, "category": "Beverages" }
+    ]
+  },
+  {
+    "id": "r5",
+    "name": "Sweet Cravings",
+    "cuisine": "Desserts",
+    "minOrder": 100,
+    "deliveryTime": 30,
+    "menu": [
+      { "id": "m22", "name": "Ice Cream Scoop", "price": 50, "category": "Dessert" },
+      { "id": "m23", "name": "Chocolate Cake Slice", "price": 90, "category": "Dessert" },
+      { "id": "m24", "name": "Waffles", "price": 120, "category": "Dessert" },
+      { "id": "m25", "name": "Milkshake", "price": 80, "category": "Beverages" }
+    ]
+  }
+]

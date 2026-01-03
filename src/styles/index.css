@@ -1,0 +1,330 @@
+/* ===============================
+   FOODWAY GLOBAL THEME
+   =============================== */
+
+:root {
+  --primary: #00eaff;
+  --primary-2: #00ffa3;
+
+  --bg-dark: #020617;
+  --bg-card: rgba(10, 37, 64, 0.85);
+
+  --text-main: #ffffff;
+  --text-muted: #9bdfff;
+
+  --border-glow: rgba(0, 234, 255, 0.25);
+}
+
+/* ===============================
+   BASE RESET
+   =============================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, system-ui, sans-serif;
+  background: radial-gradient(circle at top, #0a2540, #020617);
+  color: var(--text-main);
+}
+
+/* ===============================
+   APP LAYOUT
+   =============================== */
+
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.muted {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+/* ===============================
+   NAVBAR (fallback)
+   =============================== */
+
+.nav {
+  display: flex;
+  gap: 16px;
+  padding: 14px 20px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #0a2540, #020617);
+  border: 1px solid var(--border-glow);
+  margin-bottom: 20px;
+}
+
+/* ===============================
+   CARDS (GLOBAL)
+   =============================== */
+
+.card {
+  background: var(--bg-card);
+  border-radius: 18px;
+  padding: 20px;
+  border: 1px solid var(--border-glow);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 60px rgba(0,234,255,0.25);
+}
+
+/* ===============================
+   IMAGES (SAFE & ALIGNED)
+   =============================== */
+
+.restaurant-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px;
+}
+
+.menu-img {
+  width: 72px;
+  height: 72px;
+  border-radius: 14px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* ===============================
+   MENU
+   =============================== */
+
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  position: relative;
+}
+
+/* ===============================
+   BUTTONS (CLICK SAFE)
+   =============================== */
+
+button {
+  font-family: inherit;
+}
+
+.btn {
+  background: linear-gradient(90deg, var(--primary), var(--primary-2));
+  color: #000;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px rgba(0,234,255,0.6);
+}
+
+.btn.secondary {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+.add-btn {
+  min-width: 80px;
+}
+
+.favorite-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 15px;
+}
+
+/* ===============================
+   LINKS
+   =============================== */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ===============================
+   TOAST / FLOATING ELEMENTS
+   =============================== */
+
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 16px 22px;
+  background: linear-gradient(135deg, #00eaff, #00ffa3);
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.45);
+  font-weight: 600;
+  color: #000;
+  animation: slideUp 0.4s ease;
+  z-index: 9999;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ===============================
+   MOBILE SAFETY
+   =============================== */
+
+@media (max-width: 600px) {
+  .app {
+    padding: 16px;
+  }
+}
+.qty-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0,234,255,0.15);
+  border: 1px solid rgba(0,234,255,0.35);
+  border-radius: 999px;
+  padding: 6px 10px;
+}
+
+.qty-box button {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #00eaff, #00ffa3);
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.qty-box span {
+  min-width: 18px;
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+}
+/* ===============================
+   MENU ITEM ALIGNMENT — FINAL
+=============================== */
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* IMAGE */
+.menu-img {
+  width: 72px;
+  height: 72px;
+  border-radius: 14px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* INFO */
+.menu-info {
+  flex: 1;                 /* 👈 takes remaining space */
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+/* ACTION */
+.menu-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ADD BUTTON */
+.add-btn {
+  height: 36px;
+  padding: 0 18px;
+  white-space: nowrap;
+}
+
+/* QTY BOX */
+.qty-box {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.qty-box button {
+  height: 32px;
+  width: 32px;
+  padding: 0;
+}
+/* ===============================
+   SIZE SELECTOR STYLING
+=============================== */
+
+.menu-sizes {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* SIZE BUTTON */
+.size-btn {
+  font-size: 11px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.06);
+  color: #e6faff;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+/* HOVER */
+.size-btn:hover {
+  border-color: #00eaff;
+  box-shadow: 0 0 10px rgba(0,234,255,0.45);
+}
+
+/* ACTIVE SIZE */
+.size-btn.active {
+  background: linear-gradient(135deg, #00eaff, #00ffa3);
+  color: #000;
+  border-color: transparent;
+  box-shadow: 0 6px 18px rgba(0,234,255,0.6);
+}
+
+/* CLICK FEEDBACK */
+.size-btn:active {
+  transform: scale(0.96);
+}
