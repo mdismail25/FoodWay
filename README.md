@@ -1,142 +1,140 @@
-🍔 FoodWay — Food Delivery Web App
+# 🍔 FoodWay — Food Delivery Web Application
 
-FoodWay is a modern, full-stack food delivery web application built with React and Supabase.
-It provides a smooth, real-world food ordering experience with authentication, cart management, orders, and user profiles.
+**FoodWay** is a modern, full-stack food delivery web application built using **React (Vite)** and **Supabase**.  
+It simulates a real-world food ordering platform with authentication, cart management, orders, reviews, and user profiles.
 
-This project is designed to be minimal, clean, and internship/portfolio ready.
+🔗 **Live Demo:**  
+👉 https://food-way-lake.vercel.app/
 
-🚀 Features
-👤 Authentication
+This project is designed to be **clean, scalable, and portfolio-ready**, suitable for internships, college projects, and real-world learning.
 
-Email & password signup and login
+---
 
-Secure session handling with Supabase Auth
+## 🚀 Features
 
-Persistent login state
+### 👤 Authentication
+- Email & password signup and login
+- Secure authentication using Supabase Auth
+- Persistent login sessions
+- Protected routes for authenticated users
 
-🏪 Restaurants & Menu
+---
 
-Browse restaurants
+### 🏪 Restaurants & Menu
+- Browse restaurants with images
+- View restaurant menus
+- Size-based pricing (Small / Regular / Large)
+- Smooth UI animations and transitions
 
-View menus with images
+---
 
-Size-based pricing (Small / Regular / Large)
+### 🛒 Cart & Checkout
+- Add and remove items from cart
+- Increase/decrease quantity
+- Floating cart bar
+- Checkout with delivery address
+- Automatic order total calculation
 
-Smooth UI with modern animations
+---
 
-🛒 Cart & Checkout
+### 📦 Orders
+- Place orders linked to restaurants
+- Live order status simulation:
+  - Placed → Preparing → Out for Delivery → Delivered
+- Order history page
+- Status updates based on time (demo logic)
 
-Add/remove items from cart
+---
 
-Quantity control
+### ⭐ Reviews & Favorites
+- Rate restaurants after delivery
+- Optional written reviews
+- Add/remove favorite restaurants
+- View favorites in profile
 
-Floating cart bar
+---
 
-Checkout with delivery address
+### 👤 User Profile
+- View account details
+- Edit delivery address
+- Save food preferences (Veg / preferred cuisines)
+- Checkout directly from profile page
 
-Order total calculation
+---
 
-📦 Orders
+### 🎨 UI & UX
+- **FoodWay branded theme**  
+  - *Food* → warm colors  
+  - *Way* → cool colors
+- Responsive design (desktop & mobile)
+- Clean component-based architecture
+- Modern, minimal UI
 
-Place orders linked to restaurants
+---
 
-Live order status simulation:
+## 🛠 Tech Stack
 
-Placed → Preparing → Out for Delivery → Delivered
+### Frontend
+- React (Vite)
+- React Router
+- Context API (Auth & Cart)
+- Custom CSS styling
 
-Order history page
+### Backend (BaaS)
+- Supabase
+  - Authentication
+  - PostgreSQL database
+  - Realtime-ready architecture
 
-⭐ Reviews & Favorites
+---
 
-Rate restaurants after delivery
+## 📂 Project Structure (Simplified)
 
-Write optional reviews
-
-Add/remove favorite restaurants
-
-View favorites in profile
-
-👤 User Profile
-
-View account details
-
-Edit delivery address
-
-Save food preferences (veg & cuisines)
-
-Checkout directly from profile
-
-🎨 UI & UX
-
-FoodWay branded theme (Food = warm, Way = cool)
-
-Responsive design (desktop & mobile)
-
-Consistent global styling
-
-Clean component architecture
-
-🛠 Tech Stack
-Frontend
-
-React (Vite)
-
-React Router
-
-Context API (Auth & Cart)
-
-CSS (custom global theme)
-
-Backend (BaaS)
-
-Supabase
-
-Authentication
-
-PostgreSQL database
-
-Realtime-ready architecture
-
-📂 Project Structure (Simplified)
 src/
 ├── components/
-│   ├── RestaurantCard.jsx
-│   ├── MenuItem.jsx
-│   ├── CartBar.jsx
+│ ├── RestaurantCard.jsx
+│ ├── MenuItem.jsx
+│ ├── CartBar.jsx
 ├── pages/
-│   ├── Home.jsx
-│   ├── Restaurant.jsx
-│   ├── Orders.jsx
-│   ├── Profile.jsx
-│   ├── Login.jsx
-│   ├── Signup.jsx
+│ ├── Home.jsx
+│ ├── Restaurant.jsx
+│ ├── Orders.jsx
+│ ├── Profile.jsx
+│ ├── Login.jsx
+│ ├── Signup.jsx
 ├── contexts/
-│   ├── AuthContext.jsx
-│   ├── CartContext.jsx
+│ ├── AuthContext.jsx
+│ ├── CartContext.jsx
+├── utils/
+│ └── imageMap.js
 ├── supabase/
-│   └── supabaseClient.js
-├── styles/
-│   └── index.css
+│ └── supabaseClient.js
 ├── App.jsx
 ├── main.jsx
 
-⚙️ Setup & Installation
-1️⃣ Clone the repository
+yaml
+Copy code
+
+---
+
+## ⚙️ Setup & Installation
+
+### 1️⃣ Clone the repository
+```bash
 git clone https://github.com/your-username/foodway.git
 cd foodway
-
 2️⃣ Install dependencies
+bash
+Copy code
 npm install
-
 3️⃣ Create Supabase Project
-
 Go to 👉 https://supabase.com
 
 Create a new project
 
 Enable Email/Password authentication
 
-Create tables:
+Create the following tables:
 
 users
 
@@ -147,59 +145,59 @@ reviews
 favorites
 
 4️⃣ Configure Supabase
-
 Create src/supabase/supabaseClient.js:
 
+js
+Copy code
 import { createClient } from '@supabase/supabase-js'
 
 export const supabase = createClient(
   import.meta.env.VITE_SUPABASE_URL,
   import.meta.env.VITE_SUPABASE_ANON_KEY
 )
-
-
 Create a .env file:
 
+env
+Copy code
 VITE_SUPABASE_URL=your_supabase_url
 VITE_SUPABASE_ANON_KEY=your_anon_key
-
-5️⃣ Run the app
+5️⃣ Run the app locally
+bash
+Copy code
 npm run dev
-
 🚀 Deployment
+The application is deployed using Vercel.
 
-You can deploy easily using:
-
-Vercel (recommended)
-
-Netlify
-
-Steps:
-
+Deployment Steps:
 Push code to GitHub
 
-Import project in Vercel
+Import repository in Vercel
 
-Add environment variables
+Add environment variables:
 
-Deploy 
+VITE_SUPABASE_URL
 
-Notes
+VITE_SUPABASE_ANON_KEY
 
-Order status is time-based simulated for demo purposes.
+Deploy
 
-Architecture is ready for real-time updates using Supabase Realtime or Edge Functions.
+🔗 Live URL:
+👉 https://food-way-lake.vercel.app/
 
-Project is intentionally clean and minimal, suitable for:
+📝 Notes
+Order status updates are time-based simulations for demo purposes
 
-Internships
+Architecture is ready for:
 
-College projects
+Supabase Realtime
 
-Portfolio showcase
+Edge Functions
 
-Future Enhancements (Optional)
+WebSockets
 
+Project focuses on clarity, scalability, and learning best practices
+
+🔮 Future Enhancements
 Payment gateway integration
 
 Admin dashboard
@@ -208,11 +206,10 @@ Real-time order tracking
 
 Push notifications
 
-PWA support
+Progressive Web App (PWA)
 
-Cloud functions for order automation
+Automated backend workflows
 
-Author
+👨‍💻 Author
 Mohammed Ismail Y
-FoodWay
-Built as a full-stack React + Supabase project for learning, assessment, and portfolio use.
+Full-Stack Developer (React + Supabase)
